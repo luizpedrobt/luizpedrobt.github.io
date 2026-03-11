@@ -78,7 +78,7 @@ const translations = {
     pub_title: "Produção Acadêmica",
     pub_subtitle: "Artigos publicados em conferências internacionais.",
     pub1_type: "Artigo em Conferência",
-    pub1_authors: "Felipe Narimatsu Presti, Lucas Araujo Dantas, Marcelo Barros de Almeida, Márcio José Da Cunha, Luiz Pedro Bittencourt, Lucas Lofrano",
+    pub1_authors: "Felipe Narimatsu Presti, Lucas Araujo Dantas, Luiz Pedro Bittencourt, Lucas Lofrano, Marcelo Barros de Almeida, Márcio José Da Cunha",
     pub1_date: "Março 2026",
 
     // Contact
@@ -111,7 +111,7 @@ const translations = {
     about_label: "ABOUT ME",
     about_title: "Who am I",
     about_text: "Final-year (10th semester) undergraduate student in Control and Automation Engineering at the Federal University of Uberlândia (UFU), with solid experience in embedded systems. Throughout the degree, I developed strong knowledge in hardware and firmware, accumulating two years of experience with C/C++ development for microcontrollers. Advanced and hands-on knowledge of STM32 and ESP32 platforms, as well as experience with Linux and version control using Git.",
-    about_h1_num: "2+",
+    about_h1_num: "3+",
     about_h1_label: "Years in Embedded",
     about_h2_num: "UFU",
     about_h2_label: "Control & Automation Eng.",
@@ -169,7 +169,7 @@ const translations = {
     pub_title: "Academic Production",
     pub_subtitle: "Papers published at international conferences.",
     pub1_type: "Conference Paper",
-    pub1_authors: "Felipe Narimatsu Presti, Lucas Araujo Dantas, Marcelo Barros de Almeida, Márcio José Da Cunha, Luiz Pedro Bittencourt, Lucas Lofrano",
+    pub1_authors: "Felipe Narimatsu Presti, Lucas Araujo Dantas, Luiz Pedro Bittencourt, Lucas Lofrano, Marcelo Barros de Almeida, Márcio José Da Cunha",
     pub1_date: "March 2026",
 
     // Contact
