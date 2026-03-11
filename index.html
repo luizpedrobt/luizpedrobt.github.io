@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Luiz Pedro Bittencourt — Engenheiro de Controle e Automação | Sistemas Embarcados | STM32, ESP32, CAN, MAVLink">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Luiz Pedro Bittencourt | Embedded Systems Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +27,7 @@
         <li><a href="#experience" data-i18n="nav_experience">Experiência</a></li>
         <li><a href="#skills" data-i18n="nav_skills">Habilidades</a></li>
         <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="#publications" data-i18n="nav_publications">Publicações</a></li>
         <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
       </ul>
     </div>
@@ -237,9 +239,11 @@
           <span>MATLAB</span>
         </div>
         <div class="skill-item">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
-            alt="FreeRTOS" class="icon-mono">
+          <img src="assets/icons/stm32cubeide.svg" alt="STM32CubeIDE">
+          <span>STM32CubeIDE</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/icons/freertos.png" alt="FreeRTOS">
           <span>FreeRTOS</span>
         </div>
         <div class="skill-item skill-item-text">
@@ -307,9 +311,11 @@
           <span>MATLAB</span>
         </div>
         <div class="skill-item">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
-            alt="FreeRTOS" class="icon-mono">
+          <img src="assets/icons/stm32cubeide.svg" alt="STM32CubeIDE">
+          <span>STM32CubeIDE</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/icons/freertos.png" alt="FreeRTOS">
           <span>FreeRTOS</span>
         </div>
         <div class="skill-item skill-item-text">
@@ -349,7 +355,14 @@
     <!-- Featured Project: BitBox TCC -->
     <div class="project-featured reveal">
       <div class="project-featured-image">
-        <div class="project-image-placeholder"></div>
+        <div class="project-slideshow" data-interval="1500">
+          <!-- Add your BitBox images here:
+          <img src="assets/img/projects/bitbox/1.jpg" alt="BitBox">
+          <img src="assets/img/projects/bitbox/2.jpg" alt="BitBox">
+          <img src="assets/img/projects/bitbox/3.jpg" alt="BitBox">
+          -->
+          <div class="slideshow-placeholder"></div>
+        </div>
       </div>
       <div class="project-featured-body">
         <span class="project-tag tag-featured" data-i18n="proj1_tag">🎓 Trabalho de Conclusão de Curso</span>
@@ -378,7 +391,10 @@
 
       <!-- Estágio P1: Dispenser Granel -->
       <div class="project-card reveal">
-        <div class="project-image-placeholder"></div>
+        <div class="project-slideshow" data-interval="1500">
+          <img src="assets/img/projects/granel/granel1.png" alt="Dispenser de Granel">
+          <div class="slideshow-placeholder"></div>
+        </div>
         <div class="project-body">
           <span class="project-tag" data-i18n="proj2_tag">Estágio — Vantor</span>
           <h3 data-i18n="proj2_title">Dispenser de Granel</h3>
@@ -401,7 +417,10 @@
 
       <!-- Estágio P2: Dispenser Cotésia -->
       <div class="project-card reveal">
-        <div class="project-image-placeholder"></div>
+        <div class="project-slideshow" data-interval="1500">
+          <img src="assets/img/projects/cotesia/cotesia1.png" alt="Dispenser de Cotésia">
+          <div class="slideshow-placeholder"></div>
+        </div>
         <div class="project-body">
           <span class="project-tag" data-i18n="proj3_tag">Estágio — Vantor</span>
           <h3 data-i18n="proj3_title">Dispenser de Cotésia</h3>
@@ -422,7 +441,13 @@
 
       <!-- Lab P1: SATO -->
       <div class="project-card reveal">
-        <div class="project-image-placeholder"></div>
+        <div class="project-slideshow" data-interval="1500">
+          <!-- Add your SATO images here:
+          <img src="assets/img/projects/sato/1.jpg" alt="SATO">
+          <img src="assets/img/projects/sato/2.jpg" alt="SATO">
+          -->
+          <div class="slideshow-placeholder"></div>
+        </div>
         <div class="project-body">
           <span class="project-tag" data-i18n="proj4_tag">P&D Petrobras — LMEst</span>
           <h3 data-i18n="proj4_title">SATO — Análise e Tratamento de Óleo</h3>
@@ -446,7 +471,13 @@
 
       <!-- Lab P2: Sensor Full Wireless -->
       <div class="project-card reveal">
-        <div class="project-image-placeholder"></div>
+        <div class="project-slideshow" data-interval="1500">
+          <!-- Add your Sensor images here:
+          <img src="assets/img/projects/sensor/1.jpg" alt="Sensor Full Wireless">
+          <img src="assets/img/projects/sensor/2.jpg" alt="Sensor Full Wireless">
+          -->
+          <div class="slideshow-placeholder"></div>
+        </div>
         <div class="project-body">
           <span class="project-tag" data-i18n="proj5_tag">P&D Petrobras — LMEst</span>
           <h3 data-i18n="proj5_title">Sensor Full Wireless</h3>
@@ -466,6 +497,57 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ===== Publications ===== -->
+  <section id="publications">
+    <div class="section-header reveal">
+      <p class="section-label" data-i18n="pub_label">PUBLICAÇÕES</p>
+      <h2 class="section-title" data-i18n="pub_title">Produção Acadêmica</h2>
+      <p class="section-subtitle" data-i18n="pub_subtitle">
+        Artigos publicados em conferências internacionais.
+      </p>
+    </div>
+
+    <div class="publications-list">
+      <a href="https://apec2026.eventscribe.net/fsPopup.asp?PresentationID=1716741&mode=presInfo" target="_blank"
+        class="publication-card reveal">
+        <div class="publication-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+            <path d="M8 7h6" />
+            <path d="M8 11h8" />
+          </svg>
+        </div>
+        <div class="publication-content">
+          <span class="publication-type" data-i18n="pub1_type">Artigo em Conferência</span>
+          <h3 class="publication-title">Concurrent Power Generation and Data Transmission: A 2.4 GHz LoRa Solar
+            Monitoring System</h3>
+          <p class="publication-authors" data-i18n="pub1_authors">
+            Felipe Narimatsu Presti, Lucas Araujo Dantas, Marcelo Barros de Almeida, Márcio José Da Cunha, Luiz Pedro
+            Bittencourt, Lucas Lofrano
+          </p>
+          <div class="publication-meta">
+            <span class="publication-venue">APEC 2026 — Applied Power Electronics Conference</span>
+            <span class="publication-date" data-i18n="pub1_date">Março 2026</span>
+          </div>
+          <div class="project-techs">
+            <span>LoRa 2.4 GHz</span>
+            <span>Solar Monitoring</span>
+            <span>IoT</span>
+            <span>Power Electronics</span>
+          </div>
+        </div>
+        <div class="publication-link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -505,13 +587,6 @@
         <span>luizpedrob65@gmail.com</span>
       </a>
 
-      <a href="https://wa.me/5577998399977" target="_blank" class="contact-card">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12S18.6 0 12 0zm5.4 16.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1.1.2-3.5-.7-2.9-1.2-4.8-4.2-4.9-4.4-.1-.2-1.2-1.6-1.2-3 0-1.5.7-2.2 1-2.5.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2 .1.1.1.3 0 .4-.1.2-.1.3-.2.4l-.4.5c-.2.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.3 2.5 1.5.3.1.5.1.7-.1.2-.2.7-.8 1-1.1.2-.3.5-.2.8-.1.3.1 1.8.8 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.4z" />
-        </svg>
-        <span>WhatsApp</span>
-      </a>
     </div>
 
     <p class="contact-note reveal" data-i18n="contact_note">

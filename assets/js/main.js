@@ -72,6 +72,15 @@ const translations = {
     proj5_title: "Sensor Full Wireless",
     proj5_desc: "Módulo sensor ultra low power baseado em STM32L4, desenvolvido para amostragem de vibração e áudio para análises estruturais de sistemas mecânicos. Comunicação via Zigbee com hub baseado em Raspberry Pi. Implementa interface de comando robusta e troca estruturada de mensagens.",
 
+    // Publications
+    nav_publications: "Publicações",
+    pub_label: "PUBLICAÇÕES",
+    pub_title: "Produção Acadêmica",
+    pub_subtitle: "Artigos publicados em conferências internacionais.",
+    pub1_type: "Artigo em Conferência",
+    pub1_authors: "Felipe Narimatsu Presti, Lucas Araujo Dantas, Marcelo Barros de Almeida, Márcio José Da Cunha, Luiz Pedro Bittencourt, Lucas Lofrano",
+    pub1_date: "Março 2026",
+
     // Contact
     contact_label: "CONTATO",
     contact_title: "Vamos Conversar?",
@@ -153,6 +162,15 @@ const translations = {
     proj5_tag: "Petrobras R&D — LMEst",
     proj5_title: "Full Wireless Sensor",
     proj5_desc: "Ultra low power sensor module based on STM32L4, developed for vibration and audio sampling for structural analysis of mechanical systems. Zigbee communication with Raspberry Pi-based hub. Implements a robust command interface and structured message exchange.",
+
+    // Publications
+    nav_publications: "Publications",
+    pub_label: "PUBLICATIONS",
+    pub_title: "Academic Production",
+    pub_subtitle: "Papers published at international conferences.",
+    pub1_type: "Conference Paper",
+    pub1_authors: "Felipe Narimatsu Presti, Lucas Araujo Dantas, Marcelo Barros de Almeida, Márcio José Da Cunha, Luiz Pedro Bittencourt, Lucas Lofrano",
+    pub1_date: "March 2026",
 
     // Contact
     contact_label: "CONTACT",
@@ -285,3 +303,72 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealElements.forEach(el => revealObserver.observe(el));
+
+// ===== Project Slideshow on Hover =====
+function initSlideshows() {
+  document.querySelectorAll('.project-slideshow').forEach(slideshow => {
+    const images = slideshow.querySelectorAll('img');
+    if (images.length === 0) return; // No images yet, keep placeholder
+
+    // Hide placeholder when images exist
+    const placeholder = slideshow.querySelector('.slideshow-placeholder');
+    if (placeholder) placeholder.style.display = 'none';
+
+    // Set first image as active
+    images[0].classList.add('active');
+
+    // Create dot indicators
+    if (images.length > 1) {
+      const dotsContainer = document.createElement('div');
+      dotsContainer.className = 'slideshow-dots';
+      images.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goToSlide(slideshow, i);
+        });
+        dotsContainer.appendChild(dot);
+      });
+      slideshow.appendChild(dotsContainer);
+    }
+
+    // Store state
+    slideshow._currentIndex = 0;
+    slideshow._interval = null;
+    const interval = parseInt(slideshow.dataset.interval) || 1500;
+
+    // Find the parent card (project-card or project-featured)
+    const card = slideshow.closest('.project-card') || slideshow.closest('.project-featured');
+    if (!card) return;
+
+    card.addEventListener('mouseenter', () => {
+      if (images.length <= 1) return;
+      slideshow._interval = setInterval(() => {
+        const next = (slideshow._currentIndex + 1) % images.length;
+        goToSlide(slideshow, next);
+      }, interval);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (slideshow._interval) {
+        clearInterval(slideshow._interval);
+        slideshow._interval = null;
+      }
+    });
+  });
+}
+
+function goToSlide(slideshow, index) {
+  const images = slideshow.querySelectorAll('img');
+  const dots = slideshow.querySelectorAll('.slideshow-dot');
+
+  images.forEach(img => img.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  images[index].classList.add('active');
+  if (dots[index]) dots[index].classList.add('active');
+  slideshow._currentIndex = index;
+}
+
+initSlideshows();
